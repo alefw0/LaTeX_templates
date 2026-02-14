@@ -1,0 +1,119 @@
+%!TEX encoding   = UTF-8 Unicode
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{cleancv}
+
+% Elegir entre modo CV y Resume
+\cvtrue  % Para CV (todas las secciones)
+%\cvfalse % Para resume (secciones limitadas)
+
+% Importar publications.bib para la bibliografía
+\addbibresource{publications.bib}
+
+\begin{document}
+
+
+
+% Nombre en publicaciones bibliográficas
+\boldname{Apellido}{Nombre}{N}
+
+% Nombre en la parte superior del CV
+\cvname{Nombre y apellidos} 
+
+% Barra de contacto personalizable en cleancv
+\contactbar{correo@gmail.com}{usuariogithub}{Ubicación}
+
+% Sección 1
+\section*{Intereses Personales}
+
+Álgebra, lógica, teoría de números, combinatoria, geometría, análisis matemático, probabilidad, estadística, machine learning, inteligencia artificial, ciencia de datos, programación en Python y R, visualización de datos, matemáticas aplicadas a la economía y finanzas.
+
+% Sección 2
+\section*{Educación}
+
+\cvblock{Universidad}{Ubicación}{Grado}{2024-Presente}
+\medskip
+
+% Sección 3
+\section*{Experiencia}
+
+\cvblock[
+    \item Análisis...
+    \item Creación...
+    \item Desarrollo...
+]{Proyecto Académico}{Universidad}{Cargo}{2024-2025}
+\medskip
+\cvblock[
+    \item Tutoría...
+    \item Participación en competiciones...
+]{Universidad}{Ubicación}{Cargo}{2024-Presente}
+
+% Sección 4
+\section*{Honores \& Premios}
+
+\begin{itemize}
+\cvitem{Premio Excelencia Académica}{FCEN}{2024}
+\cvitem{Mención Honorífica}{Concurso Nacional...}{2024}
+\end{itemize}
+
+% Sección 5
+\ifcv
+\section*{Publicaciones}
+
+% Definir nota explicando símbolos de publicaciones (opcional)
+\defbibnote{symbols}{$^*$ Contribución igualitaria \quad $^\dagger$ Autor correspondiente}
+
+% Las publicaciones se cargarían desde publications.bib
+\nocite{*}
+\printbibliography[heading=none] % agregar: ,prenote=symbols
+
+% Ejemplo de proyectos 
+%\begin{itemize}
+%\cvitem{Un Algoritmo Eficiente para...}{Proyecto Académico}{2024}
+%\end{itemize}
+\fi
+
+% Sección 6
+\ifcv
+\section*{Habilidades Técnicas}
+
+\textbf{Análisis de Datos:} Python... \\
+\textbf{Visualización:} Matplotlib... \\
+\textbf{Estadística y Matemáticas:} Modelado predictivo... \\
+\textbf{Herramientas:} Git, LaTeX... \\
+\fi
+
+% Sección 7
+\ifcv
+\section*{Software y Proyectos}
+
+\begin{itemize}
+\cvitem{\href{https://github.com/usuario/repo}{\texttt{sales-analysis}}}{Análisis financiero python...}{2024-2024}
+\end{itemize}
+\fi
+
+% Sección 8
+\ifcv
+\section*{Charlas y Presentaciones}
+
+\begin{itemize}
+\cvitem{Análisis de series temporales...}{lugar}{2024}
+\end{itemize}
+\fi
+
+% Sección 9
+\ifcv
+\section*{Docencia}
+
+\subsection*{Asistente de Cátedra}
+\begin{itemize}
+\cvitem{Matemáticas básicas}{FCEN}{2024-2024}
+\end{itemize}
+
+\subsection*{Tutorías}
+\begin{itemize}
+\cvitem{Probabilidad y Estadística}{FCEN}{2024-2024}
+\end{itemize}
+\fi
+
+\end{document}
